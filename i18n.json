@@ -1,0 +1,9 @@
+{
+  "locale": {
+    "source": "en",
+    "targets": [
+      "fr",
+      "ar"
+    ]
+  }
+}
