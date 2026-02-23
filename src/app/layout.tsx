@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
+import { LingoProvider } from '@lingo.dev/compiler/react';
+import { LanguageSwitcher } from './i18n/switcher';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +21,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} antialiased bg-white text-zinc-900`}>
         <SiteHeader />
-        {children}
+        <LingoProvider locales={['en', 'fr', 'ar', 'ja']}>{children}<LanguageSwitcher /></LingoProvider>
       </body>
     </html>
   );
